@@ -6,7 +6,7 @@ import ComposeDataProviders from "./context/Compose.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ComposeDataProviders>
-        <AppRouter />
+      <AppRouter />
     </ComposeDataProviders>
   </StrictMode>
 );
