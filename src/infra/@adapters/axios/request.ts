@@ -1,18 +1,19 @@
-import { HttpStatusCode, Method, isAxiosError } from 'axios';
-import axios from '.';
+import { HttpStatusCode, Method, isAxiosError } from "axios";
+import axios from ".";
 
 const errorStatus = {
   [HttpStatusCode.Unauthorized]:
-    'Usuário e/ou senha inválido(s). Tente novamente.',
-  [HttpStatusCode.NotFound]: 'Não encontrado',
-  [HttpStatusCode.Forbidden]:
-    'Para realizar este vínculo, verifique a validação de seu usuário',
+    "Usuário e/ou senha inválido(s). Tente novamente.",
+  [HttpStatusCode.NotFound]: "Não encontrado",
+  [HttpStatusCode.Forbidden]: "Acesso proibido",
 };
 
-type IParams = Record<string, string> | {
-  page: string;
-  size: string;
-};
+type IParams =
+  | Record<string, string>
+  | {
+      page: string;
+      size: string;
+    };
 
 interface RequestProps<T = object> {
   endpoint: string;
@@ -24,21 +25,21 @@ interface RequestProps<T = object> {
 }
 
 const getParams = (
-  data: Pick<RequestProps, 'endpoint' | 'params'>,
+  data: Pick<RequestProps, "endpoint" | "params">
 ): { url: string } => {
   const { endpoint, params } = data;
 
   if (params) {
     const formattedParams = Object.entries(params).filter((obj) => !!obj[1]);
     const queryString = new URLSearchParams(formattedParams).toString();
-    return { url: endpoint.concat('?', queryString) };
+    return { url: endpoint.concat("?", queryString) };
   }
 
   return { url: endpoint };
 };
 
 export const request = async <T = unknown, D = object>(
-  props: RequestProps<D>,
+  props: RequestProps<D>
 ): Promise<T> => {
   const { endpoint, params, ...rest } = props;
 
