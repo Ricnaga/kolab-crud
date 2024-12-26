@@ -8,7 +8,7 @@ import "./index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ComposeDataProviders>
-      <Box padding="1.5rem">
+      <Box padding={{ base: 2, sm: "2", md: "6" }}>
         <AppRouter />
       </Box>
     </ComposeDataProviders>

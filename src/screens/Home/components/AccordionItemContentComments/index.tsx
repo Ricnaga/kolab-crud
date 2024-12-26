@@ -96,7 +96,7 @@ export function AccordionItemContentComments(
       <SimpleGrid gap={4}>
         <GridItem textAlign="left">
           <Heading size={"lg"}>Descrição:</Heading>
-          <Text fontWeight="normal" fontSize={"large"}>
+          <Text fontWeight="normal" fontSize={{ base: "md", md: "large" }}>
             {post.body}
           </Text>
         </GridItem>

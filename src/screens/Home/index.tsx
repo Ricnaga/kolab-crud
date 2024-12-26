@@ -22,7 +22,6 @@ export default function Home() {
   const { data, isLoading } = usePostsQuery();
 
   const { onClose, open, onOpen } = useDisclosure();
- 
 
   const [value, setValue] = useState<Array<string>>([]);
 
@@ -60,7 +59,13 @@ export default function Home() {
                   <SimpleGrid columns={2} padding="1rem" gap={4}>
                     <GridItem colSpan={2} textAlign="left" fontWeight="bold">
                       <Heading size={"2xl"}>
-                        Título: <Text fontWeight={"medium"}>{post.title}</Text>
+                        Título:{" "}
+                        <Text
+                          fontWeight={"medium"}
+                          fontSize={{ base: "1rem", sm: "1.5rem" }}
+                        >
+                          {post.title}
+                        </Text>
                       </Heading>
                     </GridItem>
                   </SimpleGrid>

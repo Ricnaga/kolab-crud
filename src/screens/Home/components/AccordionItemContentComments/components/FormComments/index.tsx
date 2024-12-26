@@ -73,7 +73,7 @@ export function FormComments(props: FormCommentsProps) {
               value={fields.name}
             />
           ) : (
-            <Em>{fields.name}</Em>
+            <Em fontSize={{ base: "1.2rem", sm: "1.5rem" }}>{fields.name}</Em>
           )}
           Email:{" "}
           {isEditting ? (
@@ -82,7 +82,7 @@ export function FormComments(props: FormCommentsProps) {
               value={fields.email}
             />
           ) : (
-            <Em>{fields.email}</Em>
+            <Em fontSize={{ base: "1.2rem", sm: "1.5rem" }}>{fields.email}</Em>
           )}
           Descrição:{" "}
           {isEditting ? (
@@ -92,7 +92,7 @@ export function FormComments(props: FormCommentsProps) {
               onChange={(e) => setFields({ ...fields, body: e.target.value })}
             />
           ) : (
-            <Em>{fields.body}</Em>
+            <Em fontSize={{ base: "1.2rem", sm: "1.5rem" }}>{fields.body}</Em>
           )}
         </Stack>
 
