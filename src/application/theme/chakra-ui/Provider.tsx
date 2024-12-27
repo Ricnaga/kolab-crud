@@ -14,7 +14,11 @@ const system = createSystem(defaultConfig, {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
     <ChakraProvider value={system}>
-      <Box padding={{ base: 2, sm: "2", md: "6" }} background={"blue.50"} h={"100vh"}>
+      <Box
+        padding={{ base: 2, sm: "2", md: "6" }}
+        background={"blue.50"}
+        h={"100vh"}
+      >
         {children}
       </Box>
     </ChakraProvider>

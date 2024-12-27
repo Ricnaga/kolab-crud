@@ -26,9 +26,9 @@
     "paths": {
       "@application/*": ["src/application/*"],
       "@components/*": ["src/shared/components/*"],
+      "@vitest-utils": ["src/application/test/vitest-utils"],
       "@/*": ["src/*"]
     }
-
   },
   "include": ["src"]
 }
