@@ -25,6 +25,7 @@ O **Kolab CRUD** é uma aplicação construída com **ReactJS** e **TypeScript**
 - [**React Query**](https://tanstack.com/query/v5/docs/framework/react/overview) - Data fetching e cache de dados.
 - [**Axios**](https://axios-http.com/docs/intro) - Fetcher de dados.
 - [**React Router**](https://reactrouter.com/) - Roteamento de páginas.
+- [**Vitest**](https://vitest.dev/) - Testes unitários.
 
 ## Requisitos
 
@@ -35,6 +36,7 @@ Para rodar a aplicação, você precisará instalar algumas ferramentas de desen
 - [Git](https://gitforwindows.org/) para baixar o repositório (se estiver no Windows)
 - [yarn](https://yarnpkg.com/) gerenciador de pacotes
 - [pnpm](https://pnpm.io/) gerenciador de pacotes
+- [playwright](https://playwright.dev/) para executar os testes do frontend
 
 ### Como Rodar a Aplicação
 
@@ -69,6 +71,16 @@ Para rodar a aplicação, você precisará instalar algumas ferramentas de desen
    ```
 
 O navegador abrirá automaticamente com a aplicação rodando em http://localhost:3000.
+
+### Testes
+
+```bash
+$ yarn test
+$ npm run test
+$ pnpm test
+```
+
+Você pode verificar a cobertura dos testes no terminal ou acessando o arquivo index.html da pasta coverage que foi criada após executar o comando acima
 
 ## Contribuições
 
