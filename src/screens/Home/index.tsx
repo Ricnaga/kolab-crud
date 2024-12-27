@@ -13,8 +13,8 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
+import { CardSkeleton } from "@components/CardSkeleton";
 import { useState } from "react";
-import { CardSkeleton } from "../../shared/components/CardSkeleton";
 import { AccordionItemContentComments } from "./components/AccordionItemContentComments";
 import { PostModal } from "./components/PostModal";
 
