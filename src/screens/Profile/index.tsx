@@ -24,7 +24,7 @@ type FieldState = {
   companyName: string;
 };
 
-export function Profile() {
+export default function Profile() {
   const { data, isLoading } = useUserQuery({ id: "1" });
   const { mutate, isPending } = useUpdateUserMutation();
 

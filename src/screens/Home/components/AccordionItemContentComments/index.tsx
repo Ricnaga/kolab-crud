@@ -23,7 +23,7 @@ import { USER_ID } from "@application/data/environment";
 import { PostEditModal } from "./components/PostEditModal";
 import { PostDeleteModal } from "./components/PostDeleteModal";
 
-type AccordionItemContentCommentsProps = {
+export type AccordionItemContentCommentsProps = {
   post: PostType;
   isEnabled?: boolean;
 };
@@ -109,7 +109,7 @@ export function AccordionItemContentComments(
             gap={2}
           >
             {isLoadingUser ? (
-              <Skeleton h={2} marginTop={2} maxW={"1/6"} />
+              <Skeleton h={4} marginTop={2} w={'full'} maxW={"1/6"} />
             ) : (
               <>
                 {userData?.name || "Desconhecido"}

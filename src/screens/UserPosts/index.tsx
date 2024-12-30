@@ -5,7 +5,7 @@ import { CardSkeleton } from "@components/CardSkeleton";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { useNavigate, useParams } from "react-router";
 
-export function UserPosts() {
+export default function UserPosts() {
   const navigate = useNavigate();
   const { userId } = useParams<{ userId: string }>();
 

@@ -17,7 +17,7 @@ import {
 import { FormEvent, useState } from "react";
 import { MdDelete, MdEdit } from "react-icons/md";
 
-type FormCommentsProps = {
+export type FormCommentsProps = {
   comment: CommentType;
   postId: string;
 };
