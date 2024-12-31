@@ -2,8 +2,8 @@ import { createBrowserRouter, RouteObject, RouterProvider } from "react-router";
 import { HOME, MAIN, PROFILE, USER_BYUSER_ID_POSTS } from "./paths";
 import Home from "../../screens/Home";
 import { MainRouter } from "./MainRouter";
-import { Profile } from "@/screens/Profile";
-import { UserPosts } from "@/screens/UserPosts";
+import Profile from "@/screens/Profile";
+import UserPosts from "@/screens/UserPosts";
 
 const routesConfig: RouteObject = {
   element: <MainRouter />,

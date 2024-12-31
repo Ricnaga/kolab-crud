@@ -27,7 +27,9 @@
       "@application/*": ["src/application/*"],
       "@components/*": ["src/shared/components/*"],
       "@vitest-utils": ["src/application/test/vitest-utils"],
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+
+      "types": ["@vitest/browser/providers/playwright"]
     }
   },
   "include": ["src"]

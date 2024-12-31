@@ -18,6 +18,8 @@ export default mergeConfig(
       ],
       exclude: ["src/screens/**/index.ts"],
       reporters: ["verbose"],
+      mockReset: true,
+      clearMocks: true,
       browser: {
         enabled: true,
         name: "chromium",

@@ -1,5 +1,203 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Home Component: AccordionItemContentComments > should render comments loading state correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    
+    
+    
+  
+
+
+    <div>
+      <div
+        class="css-1f9j1y1"
+      >
+        <div
+          class="chakra-accordion__root css-7u3wtz"
+          data-orientation="vertical"
+          data-part="root"
+          data-scope="accordion"
+          dir="ltr"
+          id="accordion::r2:"
+        >
+          <div
+            class="chakra-accordion__item css-xiajt7"
+            data-orientation="vertical"
+            data-part="item"
+            data-scope="accordion"
+            data-state="closed"
+            dir="ltr"
+            id="collapsible:accordion::r2::item:0"
+          >
+            <div
+              class="chakra-card__root css-fgvmqn"
+            >
+              <div
+                class="css-1tuimaw"
+              >
+                <div
+                  class="chakra-card__root css-1kfp14p"
+                >
+                  <div
+                    class="chakra-card__header css-aesgey"
+                  >
+                    <div
+                      class="chakra-skeleton css-1eul3x0"
+                    />
+                  </div>
+                  <div
+                    class="chakra-card__body css-11e8ur2"
+                  >
+                    <div
+                      class="chakra-skeleton css-7ftq5l"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="chakra-card__root css-1kfp14p"
+                >
+                  <div
+                    class="chakra-card__header css-aesgey"
+                  >
+                    <div
+                      class="chakra-skeleton css-1eul3x0"
+                    />
+                  </div>
+                  <div
+                    class="chakra-card__body css-11e8ur2"
+                  >
+                    <div
+                      class="chakra-skeleton css-7ftq5l"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="chakra-card__root css-1kfp14p"
+                >
+                  <div
+                    class="chakra-card__header css-aesgey"
+                  >
+                    <div
+                      class="chakra-skeleton css-1eul3x0"
+                    />
+                  </div>
+                  <div
+                    class="chakra-card__body css-11e8ur2"
+                  >
+                    <div
+                      class="chakra-skeleton css-7ftq5l"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="css-1f9j1y1"
+    >
+      <div
+        class="chakra-accordion__root css-7u3wtz"
+        data-orientation="vertical"
+        data-part="root"
+        data-scope="accordion"
+        dir="ltr"
+        id="accordion::r2:"
+      >
+        <div
+          class="chakra-accordion__item css-xiajt7"
+          data-orientation="vertical"
+          data-part="item"
+          data-scope="accordion"
+          data-state="closed"
+          dir="ltr"
+          id="collapsible:accordion::r2::item:0"
+        >
+          <div
+            class="chakra-card__root css-fgvmqn"
+          >
+            <div
+              class="css-1tuimaw"
+            >
+              <div
+                class="chakra-card__root css-1kfp14p"
+              >
+                <div
+                  class="chakra-card__header css-aesgey"
+                >
+                  <div
+                    class="chakra-skeleton css-1eul3x0"
+                  />
+                </div>
+                <div
+                  class="chakra-card__body css-11e8ur2"
+                >
+                  <div
+                    class="chakra-skeleton css-7ftq5l"
+                  />
+                </div>
+              </div>
+              <div
+                class="chakra-card__root css-1kfp14p"
+              >
+                <div
+                  class="chakra-card__header css-aesgey"
+                >
+                  <div
+                    class="chakra-skeleton css-1eul3x0"
+                  />
+                </div>
+                <div
+                  class="chakra-card__body css-11e8ur2"
+                >
+                  <div
+                    class="chakra-skeleton css-7ftq5l"
+                  />
+                </div>
+              </div>
+              <div
+                class="chakra-card__root css-1kfp14p"
+              >
+                <div
+                  class="chakra-card__header css-aesgey"
+                >
+                  <div
+                    class="chakra-skeleton css-1eul3x0"
+                  />
+                </div>
+                <div
+                  class="chakra-card__body css-11e8ur2"
+                >
+                  <div
+                    class="chakra-skeleton css-7ftq5l"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getByAltText": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholder": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Home Component: AccordionItemContentComments > should render correctly 1`] = `
 {
   "asFragment": [Function],
@@ -118,402 +316,6 @@ exports[`Home Component: AccordionItemContentComments > should render correctly 
           data-state="closed"
           dir="ltr"
           id="collapsible:accordion::r0::item:0"
-        >
-          <div
-            class="chakra-card__root css-fgvmqn"
-          >
-            <div
-              class="css-1tuimaw"
-            >
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "getByAltText": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholder": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`Home Component: AccordionItemContentComments > should renderwith User loading State 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    
-    
-    
-  
-
-
-    <div>
-      <div
-        class="css-1f9j1y1"
-      >
-        <div
-          class="chakra-accordion__root css-7u3wtz"
-          data-orientation="vertical"
-          data-part="root"
-          data-scope="accordion"
-          dir="ltr"
-          id="accordion::r4:"
-        >
-          <div
-            class="chakra-accordion__item css-xiajt7"
-            data-orientation="vertical"
-            data-part="item"
-            data-scope="accordion"
-            data-state="closed"
-            dir="ltr"
-            id="collapsible:accordion::r4::item:0"
-          >
-            <div
-              class="chakra-card__root css-fgvmqn"
-            >
-              <div
-                class="css-1tuimaw"
-              >
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="css-1f9j1y1"
-    >
-      <div
-        class="chakra-accordion__root css-7u3wtz"
-        data-orientation="vertical"
-        data-part="root"
-        data-scope="accordion"
-        dir="ltr"
-        id="accordion::r4:"
-      >
-        <div
-          class="chakra-accordion__item css-xiajt7"
-          data-orientation="vertical"
-          data-part="item"
-          data-scope="accordion"
-          data-state="closed"
-          dir="ltr"
-          id="collapsible:accordion::r4::item:0"
-        >
-          <div
-            class="chakra-card__root css-fgvmqn"
-          >
-            <div
-              class="css-1tuimaw"
-            >
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-              <div
-                class="chakra-card__root css-1kfp14p"
-              >
-                <div
-                  class="chakra-card__header css-aesgey"
-                >
-                  <div
-                    class="chakra-skeleton css-1eul3x0"
-                  />
-                </div>
-                <div
-                  class="chakra-card__body css-11e8ur2"
-                >
-                  <div
-                    class="chakra-skeleton css-7ftq5l"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "getByAltText": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholder": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`Home Component: AccordionItemContentComments > should renderwith comments loading State 1`] = `
-{
-  "asFragment": [Function],
-  "baseElement": <body>
-    
-    
-    
-  
-
-
-    <div>
-      <div
-        class="css-1f9j1y1"
-      >
-        <div
-          class="chakra-accordion__root css-7u3wtz"
-          data-orientation="vertical"
-          data-part="root"
-          data-scope="accordion"
-          dir="ltr"
-          id="accordion::r2:"
-        >
-          <div
-            class="chakra-accordion__item css-xiajt7"
-            data-orientation="vertical"
-            data-part="item"
-            data-scope="accordion"
-            data-state="closed"
-            dir="ltr"
-            id="collapsible:accordion::r2::item:0"
-          >
-            <div
-              class="chakra-card__root css-fgvmqn"
-            >
-              <div
-                class="css-1tuimaw"
-              >
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="chakra-card__root css-1kfp14p"
-                >
-                  <div
-                    class="chakra-card__header css-aesgey"
-                  >
-                    <div
-                      class="chakra-skeleton css-1eul3x0"
-                    />
-                  </div>
-                  <div
-                    class="chakra-card__body css-11e8ur2"
-                  >
-                    <div
-                      class="chakra-skeleton css-7ftq5l"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="css-1f9j1y1"
-    >
-      <div
-        class="chakra-accordion__root css-7u3wtz"
-        data-orientation="vertical"
-        data-part="root"
-        data-scope="accordion"
-        dir="ltr"
-        id="accordion::r2:"
-      >
-        <div
-          class="chakra-accordion__item css-xiajt7"
-          data-orientation="vertical"
-          data-part="item"
-          data-scope="accordion"
-          data-state="closed"
-          dir="ltr"
-          id="collapsible:accordion::r2::item:0"
         >
           <div
             class="chakra-card__root css-fgvmqn"
