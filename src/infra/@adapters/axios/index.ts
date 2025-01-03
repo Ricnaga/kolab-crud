@@ -6,7 +6,8 @@ const instance = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+  cancelToken: axios.CancelToken.source().token,
+  timeout: 5000,
 });
 
-
-export default instance
+export default instance;
