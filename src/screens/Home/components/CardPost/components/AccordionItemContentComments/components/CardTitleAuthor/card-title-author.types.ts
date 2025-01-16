@@ -5,4 +5,5 @@ export type UseCardTitleAuthorProps = {
 };
 
 export type CardTitleAuthorProps = UseCardTitleAuthorProps;
+
 export type CardTitleAuthorViewProps = UseCardTitleAuthorReturnType;

@@ -28,15 +28,13 @@ export function CardPost(props: CardPostProps) {
         <CardDescription>{post.title}</CardDescription>
         <CardDescription mb={6}>{post.body}</CardDescription>
 
-        <CardDescription>
-          <AccordionRootComments value={post.id.toString()}>
-            {(accordionItemContentCommentsProps) => (
-              <AccordionItemContentComments
-                {...accordionItemContentCommentsProps}
-              />
-            )}
-          </AccordionRootComments>
-        </CardDescription>
+        <AccordionRootComments value={post.id.toString()}>
+          {(accordionItemContentCommentsProps) => (
+            <AccordionItemContentComments
+              {...accordionItemContentCommentsProps}
+            />
+          )}
+        </AccordionRootComments>
       </CardBody>
     </CardRoot>
   ));

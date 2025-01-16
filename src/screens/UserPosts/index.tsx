@@ -1,7 +1,7 @@
 import { usePostsQuery } from "@/infra/posts";
 import { useUserQuery } from "@/infra/users";
 import { Button, Card, Heading, SimpleGrid, Text } from "@chakra-ui/react";
-import { CardSkeleton } from "@components/CardSkeleton";
+import { CardSkeleton } from "@/screens/Home/components/CardPost/components/CardSkeleton";
 import { MdOutlineArrowBack } from "react-icons/md";
 import { useNavigate, useParams } from "react-router";
 
