@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { AccordionItemContentCommentsViewProps } from "./accordion-item-content-comments.types";
 import { CardSkeleton } from "./components/CardSkeleton";
-import { CardTitleAuthor } from "./components/CardTitleAuthor";
+import { CardTitleAuthor } from "@components/CardTitleAuthor";
 
 export const AccordionItemContentCommentsView = (
   props: AccordionItemContentCommentsViewProps
