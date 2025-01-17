@@ -1,9 +1,12 @@
 import { Field, Input } from "@chakra-ui/react";
 import { UseInputProfileViewProps } from "./Input-profile.types";
+import { InputSkeleton } from "./components/InputSkeleton";
 
 export const InputProfileView = (props: UseInputProfileViewProps) => {
-  const { label, ...rest } = props;
-  
+  const { label, isLoading, ...rest } = props;
+
+  if (isLoading) return <InputSkeleton />;
+
   return (
     <Field.Root>
       <Field.Label>{label}</Field.Label>

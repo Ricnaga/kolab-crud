@@ -1,7 +1,7 @@
 import ReactQueryProvider from "@/infra/@adapters/react-query/ReactQueryProvider";
 import { ThemeProvider } from "@application/theme/chakra-ui/Provider";
 import { ReactNode } from "react";
-import UserProvider from "./User/UserProvider";
+import ProfileProvider from "./Profile/ProfileProvider";
 import RTKProvider from "./RTK/RTKProvider";
 
 type ProviderType = (props: { children: ReactNode }) => JSX.Element;
@@ -27,7 +27,7 @@ const dataProviders: ProviderType[] = [
   ThemeProvider,
 ];
 
-const appProviders: ProviderType[] = [UserProvider];
+const appProviders: ProviderType[] = [ProfileProvider];
 
 const ComposeDataProviders = combineComponents(...dataProviders);
 
