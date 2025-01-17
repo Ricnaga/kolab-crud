@@ -1,12 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { AppRouter } from "./application/router/AppRouter.tsx";
-import ComposeDataProviders from "./context/Compose.tsx";
+import ComposeDataProviders, {
+  ComposeAppProviders,
+} from "./contexts/Compose.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ComposeDataProviders>
-      <AppRouter />
+      <ComposeAppProviders>
+        <AppRouter />
+      </ComposeAppProviders>
     </ComposeDataProviders>
   </StrictMode>
 );
