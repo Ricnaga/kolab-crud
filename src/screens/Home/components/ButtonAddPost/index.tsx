@@ -1,19 +1,9 @@
-import { Button } from "@chakra-ui/react";
+import { ButtonAddPostProps } from "./button-add-post.types";
+import { ButtonAddPostView } from "./ButtonAddPost.view";
+import { useButtonAddPost } from "./use-button-add-post.model";
 
-export function ButtonAddPost() {
-  return (
-    <Button
-      transition="all"
-      _hover={{
-        filter: "brightness(105%)",
-        _active: { filter: "brightness(110%)" },
-      }}
-      backgroundGradient="to-br"
-      gradientFrom="cyan.600"
-      gradientVia="cyan.500"
-      gradientTo="cyan.400"
-    >
-      Adicionar Post
-    </Button>
-  );
+export function ButtonAddPost(props: ButtonAddPostProps) {
+  const methods = useButtonAddPost(props);
+
+  return <ButtonAddPostView {...methods} />;
 }

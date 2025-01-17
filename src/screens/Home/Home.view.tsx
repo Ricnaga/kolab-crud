@@ -9,7 +9,7 @@ export const HomeView = (props: HomeViewProps) => {
   return (
     <Grid gap={4}>
       <GridItem mt={4} justifySelf="end">
-        <ButtonAddPost />
+        <ButtonAddPost isLoading={isLoading} />
       </GridItem>
       <GridItem display="grid" gap={2} h="80vh" overflowY="auto" p={1}>
         <CardPost isLoading={isLoading} data={data} />
