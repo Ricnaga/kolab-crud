@@ -4,8 +4,8 @@ import { Input } from "@chakra-ui/react";
 
 export interface UseInputProfileProps extends ComponentProps<typeof Input> {
   label: string;
-  isLoading:boolean
+  isLoading?: boolean;
 }
 
-export type UseInputProfileViewProps = UseInputProfileProps;
+export type InputProfileViewProps = UseInputProfileProps;
 export type InputProfileProps = UseInputProfileReturnType;

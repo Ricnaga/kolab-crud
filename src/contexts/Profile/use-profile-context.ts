@@ -59,7 +59,7 @@ export function useProfileProvider() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>, key: string) =>
     setFields({ ...fields, [key]: e.target.value });
 
-  function handleUpdate(e: FormEvent<HTMLFormElement>) {
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     mutate(
       {
@@ -99,7 +99,7 @@ export function useProfileProvider() {
     setFields,
     isLoading,
     isPending,
-    handleUpdate,
+    onSubmit,
     handleChange,
   };
 }

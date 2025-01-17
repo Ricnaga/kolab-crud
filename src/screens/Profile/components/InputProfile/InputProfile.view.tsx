@@ -1,8 +1,12 @@
 import { Field, Input } from "@chakra-ui/react";
-import { UseInputProfileViewProps } from "./Input-profile.types";
+import { InputProfileViewProps } from "./Input-profile.types";
 import { InputSkeleton } from "./components/InputSkeleton";
+import { forwardRef } from "react";
 
-export const InputProfileView = (props: UseInputProfileViewProps) => {
+export const InputProfileView = forwardRef<
+  HTMLInputElement,
+  InputProfileViewProps
+>((props, ref) => {
   const { label, isLoading, ...rest } = props;
 
   if (isLoading) return <InputSkeleton />;
@@ -15,8 +19,9 @@ export const InputProfileView = (props: UseInputProfileViewProps) => {
         px={2}
         className="peer"
         placeholder=""
+        ref={ref}
         {...rest}
       />
     </Field.Root>
   );
-};
+});
