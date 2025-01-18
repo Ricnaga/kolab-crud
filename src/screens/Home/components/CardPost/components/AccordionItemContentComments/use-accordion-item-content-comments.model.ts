@@ -1,4 +1,4 @@
-import { useCommentsQuery } from "@/infra/comments";
+import { useCommentsQuery } from "@/infra/comments/react-query";
 import { UseAccordionItemContentCommentsProps } from "./accordion-item-content-comments.types";
 
 export const useAccordionItemContentComments = (
