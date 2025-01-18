@@ -3,7 +3,7 @@ import {
   userRequest,
   UserRequestPayload,
   usersRequest,
-} from "./users.requests";
+} from "../users.requests";
 
 enum UsersKey {
   USERS = "USERS",

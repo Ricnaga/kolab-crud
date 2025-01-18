@@ -1,4 +1,4 @@
-import { usePostsQuery } from "@/infra/posts";
+import { usePostsQuery } from "@/infra/posts/react-query";
 import { useParams } from "react-router";
 
 export const useCardPosts = () => {

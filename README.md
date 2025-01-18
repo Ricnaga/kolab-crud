@@ -21,10 +21,14 @@ O **Kolab CRUD** é uma aplicação construída com **ReactJS** e **TypeScript**
 
 - [**TypeScript**](https://www.typescriptlang.org/) - Tipagens avançadas para garantir maior segurança e escalabilidade.
 - [**ViteJS**](https://vitejs.dev/) - Bundler rápido e otimizado para o gerenciamento de recursos da aplicação.
-- [**Chakra UI**](https://www.chakra-ui.com/) - UI Kit.
-- [**React Query**](https://tanstack.com/query/v5/docs/framework/react/overview) - Data fetching e cache de dados.
-- [**Axios**](https://axios-http.com/docs/intro) - Fetcher de dados.
 - [**React Router**](https://reactrouter.com/) - Roteamento de páginas.
+- [**Chakra UI**](https://www.chakra-ui.com/) - UI Kit.
+- [**Axios**](https://axios-http.com/docs/intro) - Fetcher de dados.
+- [**React Query**](https://tanstack.com/query/v5/docs/framework/react/overview) - Data fetching e cache de dados.
+- [**Redux Toolkit**](https://redux-toolkit.js.org/) - Data fetching e cache de dados.
+- [**React Redux**](https://redux.js.org/) - Gerenciamento de estado.
+- [**ZOD**](https://zod.dev/) - schema validation de dados de formulário.
+- [**React Hook Form**](https://www.react-hook-form.com/) - Manipulação de formulários.
 - [**Vitest**](https://vitest.dev/) - Testes unitários.
 
 ## Requisitos

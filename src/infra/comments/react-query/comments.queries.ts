@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { commentsRequest, CommentsRequestPayload } from "./comments.requests";
+import { commentsRequest, CommentsRequestPayload } from "../comments.requests";
 
 export enum CommentsKey {
   Comments = "Comments",

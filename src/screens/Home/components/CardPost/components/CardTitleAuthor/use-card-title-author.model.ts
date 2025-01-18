@@ -1,4 +1,4 @@
-import { useUserQuery } from "@/infra/users";
+import { useUserQuery } from "@/infra/users/react-query";
 import { UseCardTitleAuthorProps } from "./card-title-author.types";
 import { useNavigate } from "react-router";
 import { USER_BYUSER_ID_POSTS } from "@application/router/paths";

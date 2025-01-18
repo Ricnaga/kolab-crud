@@ -3,7 +3,7 @@ import { profileResolver, ProfileSchemaType } from "./profile.schema";
 import { useAppSelector } from "@/contexts/RTK/store";
 import { userValue } from "@/contexts/RTK/features/user/user.slice";
 import { useState } from "react";
-import { useUpdateUserMutation } from "@/infra/users";
+import { useUpdateUserMutation } from "@/infra/users/react-query";
 
 export const useProfile = () => {
   const user = useAppSelector(userValue);

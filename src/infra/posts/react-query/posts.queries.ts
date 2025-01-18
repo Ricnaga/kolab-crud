@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { postsRequest, PostsRequestPayload } from "../posts/posts.requests";
+import { postsRequest, PostsRequestPayload } from "../posts.requests";
 
 export enum PostsKey {
   POSTS = "POSTS",

@@ -1,4 +1,4 @@
-import { usePostsQuery } from "@/infra/posts";
+import { usePostsQuery } from "@/infra/posts/react-query";
 
 export const useHome = () => {
   const { isLoading, data } = usePostsQuery();

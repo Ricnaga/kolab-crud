@@ -1,4 +1,4 @@
-import { useUpdateUserMutation, useUserQuery } from "@/infra/users";
+import { useUpdateUserMutation, useUserQuery } from "@/infra/users/react-query";
 import useContext from "@/shared/hooks/useContext";
 import {
   ChangeEvent,

@@ -1,4 +1,4 @@
-import { useUserQuery } from "@/infra/users";
+import { useUserQuery } from "@/infra/users/react-query";
 import { useParams } from "react-router";
 
 export const useHeadingAuthor = () => {

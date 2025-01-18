@@ -1,5 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
-import { deleteCommentsRequest, updateCommentsRequest } from "./comments.requests";
+import {
+  deleteCommentsRequest,
+  updateCommentsRequest,
+} from "../comments.requests";
 
 export const useUpdateCommentsMutation = () => {
   return useMutation({

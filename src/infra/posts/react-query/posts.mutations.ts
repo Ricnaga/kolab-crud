@@ -3,7 +3,7 @@ import {
   createPostsRequest,
   updatePostsRequest,
   removePostsRequest,
-} from "./posts.requests";
+} from "../posts.requests";
 
 export const useCreatePostsMutation = () => {
   return useMutation({
