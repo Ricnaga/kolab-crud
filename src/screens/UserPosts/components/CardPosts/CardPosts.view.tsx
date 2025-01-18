@@ -21,7 +21,7 @@ export const CardPostsView = (props: CardPostsViewProps) => {
       </Grid>
     );
 
-  return data.map((post) => (
+  return data?.map((post) => (
     <CardRoot variant="elevated" key={post.id.toString()}>
       <CardHeader>
         <CardTitleAuthor userId={post.userId.toString()} />

@@ -1,36 +1,9 @@
-import {
-  AccordionRoot,
-  AccordionItem,
-  AccordionItemTrigger,
-  useDisclosure,
-} from "@chakra-ui/react";
 import { AccordionRootCommentsProps } from "./accordion-root-comments.types";
+import { AccordionRootCommentsView } from "./AccordionRootComments.view";
+import { useAccordionRootComments } from "./use-accordion-root-comments.model";
 
 export function AccordionRootComments(props: AccordionRootCommentsProps) {
-  const { value, children } = props;
+  const methods = useAccordionRootComments(props);
 
-  const { open, onToggle } = useDisclosure();
-
-  return (
-    <AccordionRoot variant="plain" collapsible>
-      <AccordionItem value={value}>
-        <AccordionItemTrigger
-          cursor="pointer"
-          transition="all"
-          bg="yellow.200"
-          _hover={{
-            bg: "yellow.400",
-            color: "red.500",
-            fontWeight: 600,
-          }}
-          mb={4}
-          onClick={onToggle}
-          display="grid"
-        >
-          {open ? "Recolher" : "Ver"} comentários
-        </AccordionItemTrigger>
-        {children({ isEnabled: open, postId: value })}
-      </AccordionItem>
-    </AccordionRoot>
-  );
+  return <AccordionRootCommentsView {...methods} />;
 }
