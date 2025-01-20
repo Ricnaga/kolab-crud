@@ -19,11 +19,7 @@ export const postsRequest = async (payload?: PostsRequestPayload) => {
   return response;
 };
 
-export interface CreatePostsRequestPayload
-  extends Pick<PostType, "body" | "title"> {
-  id: string;
-  userId: string;
-}
+export type CreatePostsRequestPayload = Pick<PostType, "body" | "title">;
 
 export const createPostsRequest = async (
   payload: CreatePostsRequestPayload
