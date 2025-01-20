@@ -4,5 +4,5 @@ export type UseButtonAddPostProps = {
   isLoading: boolean;
 };
 
-export type ButtonAddPostViewProps = UseButtonAddPostProps;
-export type ButtonAddPostProps = UseButtonAddPostReturnType;
+export type ButtonAddPostProps = UseButtonAddPostProps;
+export type ButtonAddPostViewProps = UseButtonAddPostReturnType;
