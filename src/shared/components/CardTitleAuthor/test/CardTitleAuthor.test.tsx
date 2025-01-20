@@ -9,7 +9,7 @@ const PROPS: CardTitleAuthorViewProps = {
 };
 
 describe("Component: CardTitleAuthorView", () => {
-  it("should render Lading state correctly", () => {
+  it("should render Loading state correctly", () => {
     const renderProps: CardTitleAuthorViewProps = { ...PROPS, isLoading: true };
 
     const { container } = renderWithTheme(
