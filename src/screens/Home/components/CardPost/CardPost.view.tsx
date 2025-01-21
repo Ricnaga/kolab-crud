@@ -5,14 +5,14 @@ import {
   CardRoot,
 } from "@chakra-ui/react";
 import { CardSkeleton } from "./components/CardSkeleton";
-import { CardTitleAuthor } from "./components/CardTitleAuthor";
 import { AccordionRootComments } from "./components/AccordionRootComments";
 import { AccordionItemContentComments } from "./components/AccordionItemContentComments";
 import { CardPostViewProps } from "./card-post.types";
+import { CardTitleAuthor } from "@components/CardTitleAuthor";
 
 export const CardPostView = (props: CardPostViewProps) => {
-  const { isLoading, data } = props;
-  
+  const { isLoading, data, handleNextPage } = props;
+
   if (isLoading)
     return Array.from({ length: 5 }).map(() => (
       <CardSkeleton key={Math.random().toString()} />
@@ -21,7 +21,10 @@ export const CardPostView = (props: CardPostViewProps) => {
   return data.map((post) => (
     <CardRoot variant="elevated" key={post.id.toString()}>
       <CardHeader>
-        <CardTitleAuthor userId={post.userId.toString()} />
+        <CardTitleAuthor
+          userId={post.userId.toString()}
+          handleNavigate={() => handleNextPage(post.userId.toString())}
+        />
       </CardHeader>
 
       <CardBody>

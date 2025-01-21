@@ -3,6 +3,7 @@ import {
   Button,
   CardBody,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardRoot,
   Grid,
@@ -11,6 +12,7 @@ import { AccordionItemContentCommentsViewProps } from "./accordion-item-content-
 import { CardSkeleton } from "./components/CardSkeleton";
 import { CardTitleAuthor } from "@components/CardTitleAuthor";
 import { DialogAddComment } from "./components/DialogAddComment";
+import { DialogRemoveComment } from "./components/DialogRemoveComment";
 
 export const AccordionItemContentCommentsView = (
   props: AccordionItemContentCommentsViewProps
@@ -37,6 +39,32 @@ export const AccordionItemContentCommentsView = (
             <CardDescription>{comment.name}</CardDescription>
             <CardDescription>{comment.body}</CardDescription>
           </CardBody>
+
+          {isPostCreator && (
+            <CardFooter ml="auto">
+              <DialogRemoveComment post={post} comment={comment}>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  borderColor="red.400"
+                  color="red.500"
+                >
+                  Remover
+                </Button>
+              </DialogRemoveComment>
+              <Button
+                size="sm"
+                transition="all"
+                bg="gray.800"
+                _hover={{
+                  bg: "gray.700",
+                  color: "yellow.400",
+                }}
+              >
+                Editar
+              </Button>
+            </CardFooter>
+          )}
         </CardRoot>
       ))}
       {isPostCreator && (
