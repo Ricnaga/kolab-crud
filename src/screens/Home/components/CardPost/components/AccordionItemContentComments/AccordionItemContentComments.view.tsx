@@ -1,5 +1,6 @@
 import {
   AccordionItemContent,
+  Button,
   CardBody,
   CardDescription,
   CardHeader,
@@ -37,6 +38,23 @@ export const AccordionItemContentCommentsView = (
           </CardBody>
         </CardRoot>
       ))}
+      <CardRoot variant="subtle" bg="gray.200">
+        <CardBody>
+          <CardDescription>
+            <Button
+              w="full"
+              transition="all"
+              bg="gray.800"
+              _hover={{
+                bg: "gray.700",
+                color: "yellow.400",
+              }}
+            >
+              Adicionar comentário
+            </Button>
+          </CardDescription>
+        </CardBody>
+      </CardRoot>
     </AccordionItemContent>
   );
 };
