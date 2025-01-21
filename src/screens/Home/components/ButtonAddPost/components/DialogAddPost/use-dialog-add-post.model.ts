@@ -28,11 +28,14 @@ export const useDialogAddPost = (props: UseDialogAddPostProps) => {
 
   const isDisabled = !watch("body").length || !watch("title").length;
 
+  const handleClose = () => {
+    reset();
+    onClose();
+  };
+
   const onSubmit = handleSubmit((data) =>
     mutate(data, {
       onSuccess: () => {
-        reset();
-
         queryClient.setQueryData(
           [PostsKey.POSTS, null],
           (queryData: { data: Array<PostType> }) => ({
@@ -48,7 +51,7 @@ export const useDialogAddPost = (props: UseDialogAddPostProps) => {
           })
         );
 
-        onClose();
+        handleClose();
       },
     })
   );
@@ -61,6 +64,7 @@ export const useDialogAddPost = (props: UseDialogAddPostProps) => {
     isDisabled,
     open,
     onToggle,
+    handleClose
   };
 };
 

@@ -1,23 +1,23 @@
 import {
-  DialogRoot,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogBody,
-  DialogFooter,
-  DialogActionTrigger,
-  DialogCloseTrigger,
-  DialogBackdrop,
-  Field,
   Box,
+  DialogActionTrigger,
+  DialogBackdrop,
+  DialogBody,
+  DialogCloseTrigger,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogRoot,
+  DialogTitle,
+  DialogTrigger,
+  Field,
   Input,
   Textarea,
 } from "@chakra-ui/react";
-import { DialogAddPostViewProps } from "./dialog-add-post.types";
 import { Button } from "@components/Button";
+import { DialogAddCommentViewProps } from "./dialog-add-comment.types";
 
-export const DialogAddPostView = (props: DialogAddPostViewProps) => {
+export const DialogAddCommentView = (props: DialogAddCommentViewProps) => {
   const {
     children,
     isDisabled,
@@ -26,17 +26,17 @@ export const DialogAddPostView = (props: DialogAddPostViewProps) => {
     register,
     onToggle,
     open,
-    handleClose
+    handleClose,
   } = props;
 
   return (
     <DialogRoot placement="center" open={open} onOpenChange={onToggle}>
       <DialogBackdrop />
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent position="absolute" inset="0" h="min-content">
+      <DialogContent position="fixed" inset="0" h="min-content">
         <DialogCloseTrigger />
         <DialogHeader>
-          <DialogTitle>Criar Postagem</DialogTitle>
+          <DialogTitle>Criar Comentário</DialogTitle>
         </DialogHeader>
         <form onSubmit={onSubmit}>
           <DialogBody display="grid" gap={4}>
@@ -48,7 +48,7 @@ export const DialogAddPostView = (props: DialogAddPostViewProps) => {
                   px={2}
                   className="peer"
                   placeholder=""
-                  {...register("title")}
+                  {...register("name")}
                 />
               </Box>
             </Field.Root>

@@ -16,7 +16,7 @@ export const useAccordionItemContentComments = (
     isEnabled,
   });
 
-  return { data, isLoading, isPostCreator };
+  return { data, isLoading, isPostCreator, post };
 };
 
 export type UseAccordionItemContentCommentsReturnType = ReturnType<

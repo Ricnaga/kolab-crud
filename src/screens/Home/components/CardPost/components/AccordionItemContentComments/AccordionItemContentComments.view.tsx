@@ -10,11 +10,12 @@ import {
 import { AccordionItemContentCommentsViewProps } from "./accordion-item-content-comments.types";
 import { CardSkeleton } from "./components/CardSkeleton";
 import { CardTitleAuthor } from "@components/CardTitleAuthor";
+import { DialogAddComment } from "./components/DialogAddComment";
 
 export const AccordionItemContentCommentsView = (
   props: AccordionItemContentCommentsViewProps
 ) => {
-  const { data, isLoading, isPostCreator } = props;
+  const { data, isLoading, isPostCreator, post } = props;
 
   if (isLoading)
     return (
@@ -39,20 +40,22 @@ export const AccordionItemContentCommentsView = (
         </CardRoot>
       ))}
       {isPostCreator && (
-        <CardRoot variant="subtle" bg="gray.200">
+        <CardRoot variant="subtle">
           <CardBody>
             <CardDescription>
-              <Button
-                w="full"
-                transition="all"
-                bg="gray.800"
-                _hover={{
-                  bg: "gray.700",
-                  color: "yellow.400",
-                }}
-              >
-                Adicionar comentário
-              </Button>
+              <DialogAddComment post={post}>
+                <Button
+                  w="full"
+                  transition="all"
+                  bg="gray.800"
+                  _hover={{
+                    bg: "gray.700",
+                    color: "yellow.400",
+                  }}
+                >
+                  Adicionar comentário
+                </Button>
+              </DialogAddComment>
             </CardDescription>
           </CardBody>
         </CardRoot>

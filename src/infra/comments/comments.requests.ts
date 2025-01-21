@@ -21,6 +21,20 @@ export const commentsRequest = async (payload: CommentsRequestPayload) => {
   return response;
 };
 
+export type CreateCommentsRequestPayload = Pick<CommentType, "body" | "name">;
+
+export const createCommentsRequest = async (
+  payload: CreateCommentsRequestPayload
+) => {
+  const response = await request<void, CreateCommentsRequestPayload>({
+    endpoint: COMMENTS_ENDPOINT,
+    method: "POST",
+    data: payload,
+  });
+
+  return response;
+};
+
 export type UpdateCommentsRequestPayload = {
   data: Omit<CommentType, "id">;
   commentId: string;

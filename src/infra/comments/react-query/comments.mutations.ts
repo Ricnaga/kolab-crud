@@ -1,8 +1,16 @@
 import { useMutation } from "@tanstack/react-query";
 import {
+  createCommentsRequest,
   deleteCommentsRequest,
   updateCommentsRequest,
 } from "../comments.requests";
+
+export const useCreateCommentsMutation = () => {
+  return useMutation({
+    mutationKey: ["CREATE_COMMENTS"],
+    mutationFn: createCommentsRequest,
+  });
+};
 
 export const useUpdateCommentsMutation = () => {
   return useMutation({
