@@ -17,7 +17,9 @@ export const useButton = (props: UseButtonProps) => {
       }
     : props;
 
-  return formattedProps;
+  const isDisabled = props.disabled || props.isLoading 
+
+  return { ...formattedProps, isDisabled };
 };
 
 export type UseButtonReturnType = ReturnType<typeof useButton>;
