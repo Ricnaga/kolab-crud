@@ -28,7 +28,7 @@ export const CardPostView = (props: CardPostViewProps) => {
         <CardDescription>{post.title}</CardDescription>
         <CardDescription mb={6}>{post.body}</CardDescription>
 
-        <AccordionRootComments value={post.id.toString()}>
+        <AccordionRootComments post={post}>
           {(accordionItemContentCommentsProps) => (
             <AccordionItemContentComments
               {...accordionItemContentCommentsProps}

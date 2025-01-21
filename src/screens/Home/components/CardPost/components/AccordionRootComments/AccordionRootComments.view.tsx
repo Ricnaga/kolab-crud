@@ -8,11 +8,11 @@ import { AccordionRootCommentsViewProps } from "./accordion-root-comments.types"
 export const AccordionRootCommentsView = (
   props: AccordionRootCommentsViewProps
 ) => {
-  const { children, value, onToggle, open } = props;
+  const { children, post, onToggle, open } = props;
 
   return (
     <AccordionRoot variant="plain" collapsible>
-      <AccordionItem value={value}>
+      <AccordionItem value={post.id.toString()}>
         <AccordionItemTrigger
           cursor="pointer"
           transition="all"
@@ -28,7 +28,7 @@ export const AccordionRootCommentsView = (
         >
           {open ? "Recolher" : "Ver"} comentários
         </AccordionItemTrigger>
-        {children({ isEnabled: open, postId: value })}
+        {children({ isEnabled: open, post })}
       </AccordionItem>
     </AccordionRoot>
   );
