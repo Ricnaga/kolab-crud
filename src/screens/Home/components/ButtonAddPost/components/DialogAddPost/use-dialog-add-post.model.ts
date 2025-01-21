@@ -6,10 +6,16 @@ import { useForm } from "react-hook-form";
 import { addPostResolver, AddPostSchemaType } from "./dialog-add-post.schema";
 import { UseDialogAddPostProps } from "./dialog-add-post.types";
 import { useDisclosure } from "@chakra-ui/react";
+import { userValue } from "@/contexts/RTK/features/user/user.slice";
+import { useAppSelector } from "@/contexts/RTK/store";
 
 export const useDialogAddPost = (props: UseDialogAddPostProps) => {
   const { children } = props;
+
+  const user = useAppSelector(userValue);
+
   const { mutate, isPending } = useCreatePostsMutation();
+
   const { onToggle, open, onClose } = useDisclosure();
 
   const { handleSubmit, register, watch, reset } = useForm<AddPostSchemaType>({
@@ -34,8 +40,8 @@ export const useDialogAddPost = (props: UseDialogAddPostProps) => {
             data: [
               {
                 ...data,
-                userId: Math.random(),
                 id: Math.random(),
+                userId: user.id,
               },
               ...queryData.data,
             ],
