@@ -1,14 +1,10 @@
-import { Button, SimpleGrid, Spinner } from "@chakra-ui/react";
-import { ProfileViewProps } from "./profile.types";
-import { FormFields } from "@/contexts/Profile/use-profile-context";
-import { InputProfile } from "./components/InputProfile";
-import { CheckboxProfile } from "./components/CheckboxProfile";
+import { SimpleGrid } from "@chakra-ui/react";
+import { FormUser } from "./components/FormUser";
+import ProfileProvider from "./context/ProfileProvider";
 
-export const ProfileView = (props: ProfileViewProps) => {
-  const { isEnabled, isPending, onSubmit, register, setAsEnabled } = props;
-
+export const ProfileView = () => {
   return (
-    <form onSubmit={onSubmit}>
+    <ProfileProvider>
       <SimpleGrid
         gap={2}
         w="full"
@@ -17,29 +13,8 @@ export const ProfileView = (props: ProfileViewProps) => {
         justifySelf="center"
         marginTop="1rem"
       >
-        {Object.entries(FormFields).map(([key, value]) => (
-          <InputProfile
-            key={key}
-            label={value}
-            {...register(key as keyof typeof FormFields, {
-              disabled: !isEnabled,
-            })}
-          />
-        ))}
-
-        <CheckboxProfile
-          onCheckedChange={(e) => setAsEnabled(!!e.checked)}
-          checked={isEnabled}
-          label="Habilitar campos"
-        />
-        <Button
-          disabled={!isEnabled || isPending}
-          type="submit"
-          colorPalette={"cyan"}
-        >
-          {isPending ? <Spinner size={"sm"} /> : "Alterar"}
-        </Button>
+        <FormUser />
       </SimpleGrid>
-    </form>
+    </ProfileProvider>
   );
 };

@@ -3,7 +3,7 @@ import z from "zod";
 
 const required_error = "Esse campo é obrigatório";
 
-export const profileSchema = z
+export const formUserSchema = z
   .object({
     name: z.string({ required_error }),
     username: z.string({ required_error }),
@@ -18,6 +18,6 @@ export const profileSchema = z
   })
   .required();
 
-export const profileResolver = zodResolver(profileSchema);
+export const formUserResolver = zodResolver(formUserSchema);
 
-export type ProfileSchemaType = z.infer<typeof profileSchema>;
+export type FormUserSchemaType = z.infer<typeof formUserSchema>;

@@ -1,17 +1,17 @@
-import { useForm } from "react-hook-form";
-import { profileResolver, ProfileSchemaType } from "./profile.schema";
-import { useAppSelector } from "@/contexts/RTK/store";
 import { userValue } from "@/contexts/RTK/features/user/user.slice";
-import { useState } from "react";
+import { useAppSelector } from "@/contexts/RTK/store";
 import { useUpdateUserMutation } from "@/infra/users/react-query";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { formUserResolver, FormUserSchemaType } from "./form-user.schema";
 
-export const useProfile = () => {
+export const useFormUser = () => {
   const user = useAppSelector(userValue);
 
   const { isPending, mutate } = useUpdateUserMutation();
 
-  const { register, handleSubmit } = useForm<ProfileSchemaType>({
-    resolver: profileResolver,
+  const { register, handleSubmit } = useForm<FormUserSchemaType>({
+    resolver: formUserResolver,
     values: {
       ...user,
       addressStreet: user.address.street,
@@ -51,8 +51,7 @@ export const useProfile = () => {
       }
     )
   );
-
-  return { register, onSubmit, isEnabled, setAsEnabled, isPending };
+  return { isEnabled, isPending, onSubmit, register, setAsEnabled };
 };
 
-export type UseProfileReturnType = ReturnType<typeof useProfile>;
+export type UseFormUserReturnType = ReturnType<typeof useFormUser>;
