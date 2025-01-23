@@ -48,7 +48,7 @@ export const useDialogAddComment = (props: UseDialogAddCommentProps) => {
               {
                 ...data,
                 postId: post.id,
-                id: user.id,
+                id: Math.random(),
                 email: user.email,
               },
               ...queryData.data,

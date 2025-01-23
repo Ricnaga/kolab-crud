@@ -3,21 +3,18 @@ import {
   Button,
   CardBody,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardRoot,
-  Grid,
+  Grid
 } from "@chakra-ui/react";
 import { AccordionItemContentCommentsViewProps } from "./accordion-item-content-comments.types";
 import { CardSkeleton } from "./components/CardSkeleton";
-import { CardTitleAuthor } from "@components/CardTitleAuthor";
 import { DialogAddComment } from "./components/DialogAddComment";
-import { DialogRemoveComment } from "./components/DialogRemoveComment";
+import { FormComment } from "./components/FormComment";
 
 export const AccordionItemContentCommentsView = (
   props: AccordionItemContentCommentsViewProps
 ) => {
-  const { data, isLoading, isPostCreator, post, buttonProps } = props;
+  const { data, isLoading, isPostCreator, post } = props;
 
   if (isLoading)
     return (
@@ -31,31 +28,11 @@ export const AccordionItemContentCommentsView = (
   return (
     <AccordionItemContent display="grid" gap={2}>
       {data.map((comment) => (
-        <CardRoot variant="subtle" key={Math.random().toString()} bg="gray.200">
-          <CardHeader>
-            <CardTitleAuthor userId={comment.id.toString()} />
-          </CardHeader>
-          <CardBody>
-            <CardDescription>{comment.name}</CardDescription>
-            <CardDescription>{comment.body}</CardDescription>
-          </CardBody>
-
-          {isPostCreator && (
-            <CardFooter ml="auto">
-              <DialogRemoveComment post={post} comment={comment}>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  borderColor="red.400"
-                  color="red.500"
-                >
-                  Remover
-                </Button>
-              </DialogRemoveComment>
-              <Button {...buttonProps}>Editar</Button>
-            </CardFooter>
-          )}
-        </CardRoot>
+        <FormComment
+          key={comment.id.toString()}
+          comment={comment}
+          post={post}
+        />
       ))}
       {isPostCreator && (
         <CardRoot variant="subtle">
