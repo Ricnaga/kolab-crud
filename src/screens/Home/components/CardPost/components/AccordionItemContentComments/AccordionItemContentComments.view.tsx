@@ -17,7 +17,7 @@ import { DialogRemoveComment } from "./components/DialogRemoveComment";
 export const AccordionItemContentCommentsView = (
   props: AccordionItemContentCommentsViewProps
 ) => {
-  const { data, isLoading, isPostCreator, post } = props;
+  const { data, isLoading, isPostCreator, post, buttonProps } = props;
 
   if (isLoading)
     return (
@@ -52,17 +52,7 @@ export const AccordionItemContentCommentsView = (
                   Remover
                 </Button>
               </DialogRemoveComment>
-              <Button
-                size="sm"
-                transition="all"
-                bg="gray.800"
-                _hover={{
-                  bg: "gray.700",
-                  color: "yellow.400",
-                }}
-              >
-                Editar
-              </Button>
+              <Button {...buttonProps}>Editar</Button>
             </CardFooter>
           )}
         </CardRoot>

@@ -1,10 +1,11 @@
 import { CardRoot } from "@chakra-ui/react";
-import { describe, expect, it, renderWithTheme } from "@vitest-utils";
+import { describe, expect, it, renderWithTheme, vi } from "@vitest-utils";
 import { CardTitleAuthorViewProps } from "../card-title-author.types";
 import { CardTitleAuthorView } from "../CardTitleAuthor.view";
 
 const PROPS: CardTitleAuthorViewProps = {
   authorName: "MOCKED_AUTHOR_NAME",
+  handleNavigate: vi.fn(),
   isLoading: false,
 };
 
