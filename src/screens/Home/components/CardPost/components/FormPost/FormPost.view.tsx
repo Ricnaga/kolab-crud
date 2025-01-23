@@ -8,8 +8,8 @@ import {
 } from "@chakra-ui/react";
 import { CardTitleAuthor } from "@components/CardTitleAuthor";
 import { FormPostViewProps } from "./form-post.types";
-import { AccordionRootComments } from "../AccordionRootComments";
-import { AccordionItemContentComments } from "../AccordionItemContentComments";
+import { AccordionRootComments } from "./components/AccordionRootComments";
+import { AccordionItemContentComments } from "./components/AccordionItemContentComments";
 import { DialogRemovePost } from "./components/DialogRemovePost";
 
 export const FormPostView = (props: FormPostViewProps) => {
