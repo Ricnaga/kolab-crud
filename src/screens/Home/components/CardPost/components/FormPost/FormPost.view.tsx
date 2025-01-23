@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardRoot,
   Grid,
+  Input,
 } from "@chakra-ui/react";
 import { CardTitleAuthor } from "@components/CardTitleAuthor";
 import { FormPostViewProps } from "./form-post.types";
@@ -13,7 +14,15 @@ import { AccordionItemContentComments } from "./components/AccordionItemContentC
 import { DialogRemovePost } from "./components/DialogRemovePost";
 
 export const FormPostView = (props: FormPostViewProps) => {
-  const { post, buttonProps, handleNextPage, isPostCreator } = props;
+  const {
+    post,
+    buttonProps,
+    handleNextPage,
+    isPostCreator,
+    fields,
+    handleChange,
+    open,
+  } = props;
 
   return (
     <CardRoot variant="elevated">
@@ -25,8 +34,34 @@ export const FormPostView = (props: FormPostViewProps) => {
       </CardHeader>
 
       <CardBody>
-        <CardDescription>{post.title}</CardDescription>
-        <CardDescription mb={2}>{post.body}</CardDescription>
+        <CardDescription>
+          {open ? (
+            <Input
+              bg="yellow.50"
+              px={2}
+              h="8"
+              mb="2"
+              value={fields.title}
+              onChange={(e) => handleChange("title", e.target.value)}
+            />
+          ) : (
+            fields.title
+          )}
+        </CardDescription>
+        <CardDescription mb={2}>
+          {open ? (
+            <Input
+              bg="yellow.50"
+              px={2}
+              h="8"
+              mb="2"
+              value={fields.body}
+              onChange={(e) => handleChange("body", e.target.value)}
+            />
+          ) : (
+            fields.body
+          )}
+        </CardDescription>
         {isPostCreator && (
           <Grid gridTemplateColumns="repeat(2, 1fr)" gap={2} mb={4} ml="auto">
             <DialogRemovePost post={post}>

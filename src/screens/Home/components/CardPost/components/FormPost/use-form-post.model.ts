@@ -9,7 +9,7 @@ export const useFormPost = (props: UseFormPostProps) => {
   const { post } = props;
   const navigate = useNavigate();
 
-  const { handlePostCreator, user } = useHomeContext();
+  const { handlePostCreator } = useHomeContext();
   const isPostCreator = handlePostCreator(post.userId);
 
   const [fields, setFields] = useState<FieldStateType>({
@@ -54,7 +54,6 @@ export const useFormPost = (props: UseFormPostProps) => {
     open,
     fields,
     handleChange,
-    user,
     handleNextPage,
   };
 };
