@@ -11,7 +11,7 @@ export const UserPostsView = (props: UserPostsViewProps) => {
     <Grid gap={4}>
       <GridItem mt={4}>
         <Flex alignItems="center" gap={2}>
-          <Button borderRadius="full" onClick={() => handleBack()}>
+          <Button borderRadius="full" onClick={handleBack}>
             <MdOutlineArrowBack />
           </Button>
           <HeadingAuthor />
