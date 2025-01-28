@@ -19,6 +19,7 @@ O **Kolab CRUD** é uma aplicação construída com **ReactJS** e **TypeScript**
 
 ### Tecnologias Utilizadas
 
+- [**Arquitetura MVVM**](https://learn.microsoft.com/pt-br/windows/uwp/data-binding/data-binding-and-mvvm) - Arquitetura para frontend
 - [**TypeScript**](https://www.typescriptlang.org/) - Tipagens avançadas para garantir maior segurança e escalabilidade.
 - [**ViteJS**](https://vitejs.dev/) - Bundler rápido e otimizado para o gerenciamento de recursos da aplicação.
 - [**React Router**](https://reactrouter.com/) - Roteamento de páginas.
