@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { UseDialogAddPostReturnType } from "./use-dialog-add-post.model";
 
 export type UseDialogAddPostProps = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export type DialogAddPostProps = UseDialogAddPostProps;

@@ -42,3 +42,5 @@ export type UserType = {
   address: AddressType;
   company: CompanyType;
 };
+
+export type ResultHook<T = unknown> = Record<"current", T>;
