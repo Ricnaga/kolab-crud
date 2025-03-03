@@ -1,12 +1,9 @@
-import { usePostsQuery } from "@/infra/posts/rtk";
-import { useParams } from "react-router";
+import { UseCardPostsProps } from "./card-posts.types";
 
-export const useCardPosts = () => {
-  const { userId } = useParams<{ userId: string }>();
+export const useCardPosts = (props: UseCardPostsProps) => {
+  const { data } = props;
 
-  const { isLoading, data } = usePostsQuery({ userId });
-
-  return { isLoading, data };
+  return { data };
 };
 
 export type UseCardPostsReturnType = ReturnType<typeof useCardPosts>;

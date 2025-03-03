@@ -6,10 +6,13 @@ import {
 } from "@/infra/posts/posts.requests";
 import { CardSkeleton } from "@/screens/Home/components/CardPost/components/CardSkeleton";
 import { ResponseType } from "@/shared/types/requests.types";
+import { Grid, Text } from "@chakra-ui/react";
 import { ReactNode, Suspense, useEffect, useState } from "react";
+import { ErrorBoundary } from "react-error-boundary";
 
 interface PostsPresenterProps extends PostsRequestPayload {
   children: (data: PostsResponse) => ReactNode;
+  userId?: string;
 }
 
 function PostsPresenter(props: PostsPresenterProps) {
@@ -24,7 +27,7 @@ function PostsPresenter(props: PostsPresenterProps) {
     }).then((response) => response.data || []);
 
     setData(promiseWrapper(promise));
-  }, [payload]);
+  }, []);
 
   return children(data);
 }
@@ -32,11 +35,25 @@ function PostsPresenter(props: PostsPresenterProps) {
 type PostsContainerProps = PostsPresenterProps;
 
 export function PostsContainer(props: PostsContainerProps) {
-  const { children } = props;
+  const { children, userId } = props;
 
   return (
-    <Suspense fallback={<CardSkeleton />}>
-      <PostsPresenter>{(data) => children(data)}</PostsPresenter>
+    <Suspense
+      fallback={
+        <Grid gap={2}>
+          {Array.from({ length: 5 }).map(() => (
+            <CardSkeleton key={Math.random().toString()} />
+          ))}
+        </Grid>
+      }
+    >
+      <ErrorBoundary
+        fallback={<Text>Não foi possível renderizar as postagens</Text>}
+      >
+        <PostsPresenter userId={userId}>
+          {(data) => children(data)}
+        </PostsPresenter>
+      </ErrorBoundary>
     </Suspense>
   );
 }

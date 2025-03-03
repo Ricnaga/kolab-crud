@@ -4,9 +4,10 @@ import { CardPosts } from "./components/CardPosts";
 import { HeadingAuthor } from "./components/HeadingAuthor";
 import { UserPostsViewProps } from "./user-posts.types";
 import { Button } from "@components/Button";
+import { PostsContainer } from "@components/Container/posts/PostsContainer";
 
 export const UserPostsView = (props: UserPostsViewProps) => {
-  const { handleBack } = props;
+  const { handleBack, userId } = props;
   return (
     <Grid gap={4}>
       <GridItem mt={4}>
@@ -18,7 +19,9 @@ export const UserPostsView = (props: UserPostsViewProps) => {
         </Flex>
       </GridItem>
       <GridItem display="grid" gap={2} h="80vh" overflowY="auto" p={1}>
-        <CardPosts />
+        <PostsContainer userId={userId}>
+          {(data) => <CardPosts data={data} />}
+        </PostsContainer>
       </GridItem>
     </Grid>
   );
